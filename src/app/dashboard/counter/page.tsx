@@ -6,6 +6,7 @@ export const metadata = {
 }
 
 const CounterPage = () => {
+  
   return (
     <div className="flex justify-center items-center w-full h-full">
       <CartCounter />

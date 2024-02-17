@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { IoBrowsersOutline, IoCalculator, IoLogoReact } from 'react-icons/io5'
+import { IoBrowsersOutline, IoCalculator, IoHeartOutline, IoLogoReact } from 'react-icons/io5'
 import SidebarMenuItem from './SidebarMenuItem'
 import { IoIosFootball } from 'react-icons/io'
 
@@ -21,6 +21,12 @@ const menuItems = [
     icon: <IoIosFootball size={40} />,
     title: 'Pokemons',
     subtitle: 'Generacion estatica'
+  },
+  {
+    path: '/dashboard/favorites',
+    icon: <IoHeartOutline size={40} />,
+    title: 'Favorites',
+    subtitle: 'Pokemons favoritos' 
   }
 ]
 
@@ -28,19 +34,19 @@ const Sidebar = () => {
   return (
     <div
       id="menu"
-      className="bg-[#171A3B] min-h-screen  z-10 text-neutral-100 w-64  left-0 "
+      className="bg-[#3E4CA0] min-h-screen  z-10 text-neutral-100 w-64  left-0 "
     >
       <div id="logo" className="my-4 px-6">
         <h1 className="text-lg md:text-2xl font-bold text-white flex justify-center items-center">
           <IoLogoReact />
           <span>Dashboard</span>
         </h1>
-        <p className="text-slate-500 text-sm">
+        <p className="text-sm text-neutral-100">
           Manage your actions and activities
         </p>
       </div>
       <div id="profile" className="px-6 py-10">
-        <p className="text-slate-500">Welcome back,</p>
+        <p className="text-neutral-100">Welcome back,</p>
         <a href="#" className="inline-flex space-x-2 items-center">
           <span>
             <Image
