@@ -1,11 +1,11 @@
 'use client'
 
-import { useAppDispatch, useAppSelector } from '@/sotre'
+import { useAppDispatch, useAppSelector } from '@/store'
 import {
   addOne,
   initCounterState,
   minusOne
-} from '@/sotre/counter/counterSlice'
+} from '@/store/counter/counterSlice'
 import { useEffect } from 'react'
 
 interface Props {
@@ -13,11 +13,13 @@ interface Props {
 }
 
 export interface CounterResponse {
+  method: string
   count: number
 }
 
 const getApiCounter = async (): Promise<CounterResponse> => {
   const data = await fetch('/api/counter').then((res) => res.json())
+  console.log(data)
   return data
 }
 
